@@ -51,7 +51,6 @@ const addBookHandler = (request, h) => {
       status: 'error',
       message: 'Buku gagal ditambahkan',
     });
-
     response.code(500);
     return response;
   }
@@ -97,6 +96,7 @@ const getAllBooksHandler = (request) => {
 
 const getBookHandler = (request, h) => {
   const { bookId } = request.params;
+
   const book = books[books.findIndex((b) => b.id === bookId)];
   if (!book) {
     const response = h.response({

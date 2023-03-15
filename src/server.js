@@ -13,7 +13,6 @@ const init = async () => {
   });
 
   server.route(routes);
-
   await server.start();
   process.stdout.write(`Server running at ${server.info.uri}`);
 };
